@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  const midlink= ["Service","Projects","About"];
+
+   return(
+     <div className="App">
+         <div>
+
+           <h4>LOGOBAKERY</h4>
+          
+         </div>
+         <div className="App-mid">
+            
+                 {midlink.map((e)=>{
+                     return <Midlink midlink={e} />
+                   })}
+        
+         </div>
+         <div>
+
+           <button>Contact</button>
+
+         </div>
+     </div>
+   )
+}
+function Midlink(props){
+   console.log("midlink pros", props);
+   return <p> 
+     {props.midlink}
+   </p>
 }
 
 export default App;
